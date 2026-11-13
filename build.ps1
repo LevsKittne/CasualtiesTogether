@@ -24,7 +24,6 @@ Copy-Item (Join-Path $root "target\ct\CasualtiesTogether.dll") $ct
 cargo build --release --manifest-path (Join-Path $root "Cargo.toml") -p installer
 if ($LASTEXITCODE -ne 0) { throw "installer build failed" }
 Copy-Item (Join-Path $root "target\release\CasualtiesTogether-Setup.exe") $setup
-Copy-Item (Join-Path $root "installer\*.txt") $setup
 
 if ($Install) {
     Copy-Item (Join-Path $dist "ModLoader") $GameDir -Recurse -Force

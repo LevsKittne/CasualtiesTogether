@@ -1,3 +1,5 @@
+pub mod i18n;
+
 use std::ffi::c_void;
 use std::os::windows::process::CommandExt;
 use std::path::{Path, PathBuf};
