@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+members = ["crates/ct-net", "crates/ct", "installer"]
+
+[workspace.package]
+edition = "2024"
+license = "LGPL-2.1-only"
+rust-version = "1.88"
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+panic = "unwind"
+strip = true
+
+[profile.release.package.installer]
+opt-level = "s"
