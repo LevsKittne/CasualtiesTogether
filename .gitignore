@@ -2,3 +2,4 @@ target/
 dist/
 bin/
 obj/
+!/installer/src/bin/
